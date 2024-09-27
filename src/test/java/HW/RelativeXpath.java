@@ -28,50 +28,48 @@ Then all the necessary key points in the acceptance criteria should be met.
 8. The user can use **any XPath technique** to enter the street number and house number.
          */
 
-        WebDriver driver=new ChromeDriver();
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
 
         driver.get("https://www.syntaxprojects.com/Xpath-homework.php");
-        WebElement hobbies=driver.findElement(By.xpath("//input[@id='yourHobbiesId']"));
+        WebElement hobbies = driver.findElement(By.xpath("//input[@id='yourHobbiesId']"));
         hobbies.sendKeys("Cycling");
 
-        WebElement button=driver.findElement(By.xpath("//button[text()='Click Here']"));
+        WebElement button = driver.findElement(By.xpath("//button[text()='Click Here']"));
         button.click();
 
-        WebElement movies=driver.findElement(By.xpath("//input[@id='favoriteMoviesId']"));
+        WebElement movies = driver.findElement(By.xpath("//input[@id='favoriteMoviesId']"));
         movies.sendKeys("Idk");
 
-        WebElement text=driver.findElement(By.xpath("//label[contains(text(),'ipsum dolor sit amet')]"));
-        String printText= text.getText();
+        WebElement text = driver.findElement(By.xpath("//label[contains(text(),'ipsum dolor sit amet')]"));
+        String printText = text.getText();
         System.out.println(printText);
 
-        WebElement city=driver.findElement(By.xpath("//input[@id='yourCity']"));
+        WebElement city = driver.findElement(By.xpath("//input[@id='yourCity']"));
         city.sendKeys("NYC");
 
-        WebElement personalEmail=driver.findElement(By.xpath("(//input[@type='email' and @class='form-control'])[1]"));
+        WebElement personalEmail = driver.findElement(By.xpath("(//input[@type='email' and @class='form-control'])[1]"));
         personalEmail.sendKeys("personal@personal.com");
 
-        WebElement officeEmail=driver.findElement(By.xpath("(//input[@type='email' and @class='form-control'])[2]"));
+        WebElement officeEmail = driver.findElement(By.xpath("(//input[@type='email' and @class='form-control'])[2]"));
         officeEmail.sendKeys("office@office.com");
 
-        WebElement professionalEmail=driver.findElement(By.xpath("(//input[@type='email' and @class='form-control'])[3]"));
+        WebElement professionalEmail = driver.findElement(By.xpath("(//input[@type='email' and @class='form-control'])[3]"));
         professionalEmail.sendKeys("professional@professional.com");
 
         //#7 Client Name / Client ID don't have unique attribute value to use 'and'/'or' operators:
 
-        WebElement clientName=driver.findElement(By.xpath("//input[@id='clientName']"));
+        WebElement clientName = driver.findElement(By.xpath("//input[@id='clientName']"));
         clientName.sendKeys("Client");
 
-        WebElement clientID=driver.findElement(By.xpath("//input[@id='clientId']"));
+        WebElement clientID = driver.findElement(By.xpath("//input[@id='clientId']"));
         clientID.sendKeys("ID");
 
-        WebElement streetN=driver.findElement(By.xpath("//input[@name='StreetNo']"));
+        WebElement streetN = driver.findElement(By.xpath("//input[@name='StreetNo']"));
         streetN.sendKeys("123");
 
-        WebElement houseN=driver.findElement(By.xpath("//input[@name='HouseNo']"));
+        WebElement houseN = driver.findElement(By.xpath("//input[@name='HouseNo']"));
         houseN.sendKeys("123");
-
-
 
 
     }
