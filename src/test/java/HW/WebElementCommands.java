@@ -40,6 +40,7 @@ Option Box:
         WebElement musicFest = driver.findElement(By.xpath("//input[@value='music_festival']"));
         if (musicFest.isEnabled()) {
             System.out.println("The 'Music Festival' option is enabled");
+            musicFest.click();
         } else {
             System.out.println("The 'Music Festival' option is disabled");
         }
